@@ -57,8 +57,26 @@ namespace ChessLibrary
 
 		// sets up a normal game of chess
 		public void normalGame() 
-		{ 
+		{
+			// Now setup the board for black side
+			m_cells["a1"].piece = new Piece(Piece.PieceType.Rook, m_BlackSide);
+			m_cells["h1"].piece = new Piece(Piece.PieceType.Rook, m_BlackSide);
+			m_cells["b1"].piece = new Piece(Piece.PieceType.Knight, m_BlackSide);
+			m_cells["g1"].piece = new Piece(Piece.PieceType.Knight, m_BlackSide);
+			m_cells["c1"].piece = new Piece(Piece.PieceType.Bishop, m_BlackSide);
+			m_cells["f1"].piece = new Piece(Piece.PieceType.Bishop, m_BlackSide);
+			m_cells["e1"].piece = new Piece(Piece.PieceType.King, m_BlackSide);
+			m_cells["d1"].piece = new Piece(Piece.PieceType.Queen, m_BlackSide);
 
+			// Now setup the board for white side
+			m_cells["a8"].piece = new Piece(Piece.PieceType.Rook, m_WhiteSide);
+			m_cells["h8"].piece = new Piece(Piece.PieceType.Rook, m_WhiteSide);
+			m_cells["b8"].piece = new Piece(Piece.PieceType.Knight, m_WhiteSide);
+			m_cells["g8"].piece = new Piece(Piece.PieceType.Knight, m_WhiteSide);
+			m_cells["c8"].piece = new Piece(Piece.PieceType.Bishop, m_WhiteSide);
+			m_cells["f8"].piece = new Piece(Piece.PieceType.Bishop, m_WhiteSide);
+			m_cells["e8"].piece = new Piece(Piece.PieceType.King, m_WhiteSide);
+			m_cells["d8"].piece = new Piece(Piece.PieceType.Queen, m_WhiteSide);
 		}
 
 		// Sets up the Fischer random chess game by randomly placing the pieces.
