@@ -32,6 +32,7 @@ namespace Chess
 		private System.Windows.Forms.MenuItem menuItem8;
 		private System.Windows.Forms.MenuItem menuItem9;
 		private System.Windows.Forms.MenuItem mnuNewGame;
+		private System.Windows.Forms.MenuItem mnuNewRandGame;
 		private System.Windows.Forms.MenuItem mnuFileExit;
 		private System.Windows.Forms.MenuItem menuItem11;
 		private System.Windows.Forms.Panel panel1;
@@ -90,6 +91,7 @@ namespace Chess
             this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.mnuNewGame = new System.Windows.Forms.MenuItem();
+            this.mnuNewRandGame = new System.Windows.Forms.MenuItem();
             this.mnuLoadGame = new System.Windows.Forms.MenuItem();
             this.mnuSaveGame = new System.Windows.Forms.MenuItem();
             this.menuItem9 = new System.Windows.Forms.MenuItem();
@@ -148,6 +150,7 @@ namespace Chess
             this.menuItem1.Index = 0;
             this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mnuNewGame,
+            this.mnuNewRandGame,
             this.mnuLoadGame,
             this.mnuSaveGame,
             this.menuItem9,
@@ -161,28 +164,35 @@ namespace Chess
             this.mnuNewGame.Text = "&New";
             this.mnuNewGame.Click += new System.EventHandler(this.mnuNewGame_Click);
             // 
+            // mnuNewRandomGame
+            // 
+            this.mnuNewRandGame.Index = 1;
+            this.mnuNewRandGame.Shortcut = System.Windows.Forms.Shortcut.CtrlR;
+            this.mnuNewRandGame.Text = "&New Random";
+            this.mnuNewRandGame.Click += new System.EventHandler(this.mnuNewRandomGame_Click);
+            // 
             // mnuLoadGame
             // 
-            this.mnuLoadGame.Index = 1;
+            this.mnuLoadGame.Index = 2;
             this.mnuLoadGame.Text = "&Load Game";
             this.mnuLoadGame.Click += new System.EventHandler(this.mnuLoadGame_Click);
             // 
             // mnuSaveGame
             // 
             this.mnuSaveGame.Enabled = false;
-            this.mnuSaveGame.Index = 2;
+            this.mnuSaveGame.Index = 3;
             this.mnuSaveGame.Shortcut = System.Windows.Forms.Shortcut.CtrlS;
             this.mnuSaveGame.Text = "&Save Game";
             this.mnuSaveGame.Click += new System.EventHandler(this.mnuSaveGame_Click);
             // 
             // menuItem9
             // 
-            this.menuItem9.Index = 3;
+            this.menuItem9.Index = 4;
             this.menuItem9.Text = "-";
             // 
             // mnuFileExit
             // 
-            this.mnuFileExit.Index = 4;
+            this.mnuFileExit.Index = 5;
             this.mnuFileExit.Text = "&Exit";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 

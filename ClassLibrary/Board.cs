@@ -55,7 +55,11 @@ namespace ChessLibrary
 				m_cells[7, col].piece = new Piece(Piece.PieceType.Pawn,m_WhiteSide);
 		}
 
-		public void normalGame() { }
+		// sets up a normal game of chess
+		public void normalGame() 
+		{ 
+
+		}
 
 		// Sets up the Fischer random chess game by randomly placing the pieces.
 		public void randomPlace() { 
