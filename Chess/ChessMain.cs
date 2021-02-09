@@ -532,6 +532,19 @@ namespace Chess
 				GameObj.ChessGame.DoQuiescentSearch = mnuCompQuiescentSearch.Checked;
 			}
 		}
+        // Menu Handler
+		private void mnuNewRandomGame_Click(object sender, System.EventArgs e)
+		{
+			GameObj.NewGame(1);	// Initialize the new game
+
+			// Initialize computer player characterstics
+			if (GameObj.ChessGame!=null)
+			{
+				GameObj.ChessGame.DoNullMovePruning = mnCompNullMove.Checked;
+				GameObj.ChessGame.DoPrincipleVariation = mnuCompPrincipleVar.Checked;
+				GameObj.ChessGame.DoQuiescentSearch = mnuCompQuiescentSearch.Checked;
+			}
+		}
 
 		private void mnuFileExit_Click(object sender, System.EventArgs e)
 		{

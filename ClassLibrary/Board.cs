@@ -32,8 +32,8 @@ namespace ChessLibrary
 			m_cells = new Cells();					// Initialize the chess cells collection
 		}
 
-		// Initialize the chess board and place piece on thier initial positions
-		public void Init()
+		// Initialize the chess board and place piece on thier initial positions. This takes in a version int to select what type of game to generate.
+		public void Init(int version)
 		{
 			m_cells.Clear();		// Remove any existing chess cells
 
@@ -44,7 +44,8 @@ namespace ChessLibrary
 					m_cells.Add(new Cell(row,col));	// Initialize and add the new chess cell
 				}
 
-			randomPlace();
+			if (version == 0) { normalGame(); }
+			else { randomPlace(); }
 
 			for (int col=1; col<=8; col++)
 				m_cells[2, col].piece = new Piece(Piece.PieceType.Pawn,m_BlackSide);
@@ -54,6 +55,9 @@ namespace ChessLibrary
 				m_cells[7, col].piece = new Piece(Piece.PieceType.Pawn,m_WhiteSide);
 		}
 
+		public void normalGame() { }
+
+		// Sets up the Fischer random chess game by randomly placing the pieces.
 		public void randomPlace() { 
 		#region Bishop 1
 		Random rng = new Random();

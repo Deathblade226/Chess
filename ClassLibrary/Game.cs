@@ -217,8 +217,8 @@ namespace ChessLibrary
             }
         }
 
-		// Reset the game board and all player status
-		public void Reset()
+		// Reset the game board and all player status. This takes in a version int to select what type of game to generate.
+		public void Reset(int version = 0)
 		{
 			m_MovesHistory.Clear();
 			m_RedoMovesHistory.Clear();
@@ -229,7 +229,7 @@ namespace ChessLibrary
 
             GameTurn = Side.SideType.White;	// In chess first turn is always of white
 			m_WhitePlayer.TimeStart();	// Player time starts
-			Board.Init();	// Initialize the board object
+			Board.Init(version);	// Initialize the board object
 		}
 
 		// Return back the white player reference

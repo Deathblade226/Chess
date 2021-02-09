@@ -437,8 +437,8 @@ namespace Chess
             }
         }
 
-		// Initialize a new game and set the pieces on the board
-		public void NewGame()
+		// Initialize a new game and set the pieces on the board. This takes in a version int to select what type of game to generate.
+		public void NewGame(int version = 0)
 		{
 			ParentForm.ChessCaptureBar.Clear();
 			NewGame NewGameDlg = new NewGame();
