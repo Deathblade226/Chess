@@ -44,6 +44,7 @@ namespace ChessLibrary
 					m_cells.Add(new Cell(row,col));	// Initialize and add the new chess cell
 				}
 
+			//Selects between a normal game and a Fischer Random Chess game.
 			if (version == 0) { normalGame(); }
 			else { randomPlace(); }
 
