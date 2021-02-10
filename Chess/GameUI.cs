@@ -437,8 +437,8 @@ namespace Chess
             }
         }
 
-		// Initialize a new game and set the pieces on the board
-		public void NewGame()
+		// Initialize a new game and set the pieces on the board. This takes in a version int to select what type of game to generate.
+		public void NewGame(int version = 0)
 		{
 			ParentForm.ChessCaptureBar.Clear();
 			NewGame NewGameDlg = new NewGame();
@@ -453,7 +453,7 @@ namespace Chess
 				// Handle the events fired by the library
 				ChessGame.ComputerThinking += new ChessLibrary.Game.ChessComputerThinking(ComputerThinking);
 
-				ChessGame.Reset();	// Reset the game board
+				ChessGame.Reset(version);	// Reset the game board
 				IsRunning = true;
 				LogCounter = 0;
 
